@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X } from 'lucide-react';
+import logo from './assets/logo.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -143,10 +144,11 @@ export function Header() {
                 }}
               />
               <img 
-                src="/src/assets/logo.png" 
+                src={logo} 
                 alt="Xeve Tech Logo" 
                 className="w-full h-full object-contain relative z-10"
               />
+
             </motion.div>
             <motion.span 
               className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
@@ -219,10 +221,11 @@ export function Header() {
                     >
                       <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                         <img 
-                          src="/src/assets/logo.png" 
+                          src={logo} 
                           alt="Xeve Tech Logo" 
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-contain relative z-10"
                         />
+
                       </div>
                       <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                         Xeve Tech
@@ -265,3 +268,4 @@ export function Header() {
     </motion.header>
   );
 }
+

@@ -380,12 +380,19 @@ export function ProductsSection() {
 
                   <div className="flex gap-3 pt-2 mt-auto">
                     <Button 
+                      asChild
                       variant="outline" 
                       size="sm"
                       className="flex-1 border-purple-500/50 text-purple-300 hover:bg-purple-900/30"
                     >
-                      <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                      Join Waitlist
+                      <a
+                        href="https://forms.gle/Zz5BxhpybC2GfpdG7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                        Join Waitlist
+                      </a>
                     </Button>
                     <Button 
                       variant="ghost" 

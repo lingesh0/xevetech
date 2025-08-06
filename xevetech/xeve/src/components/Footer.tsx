@@ -107,6 +107,8 @@ export function Footer() {
     }
   };
 
+
+
   return (
     <>
       <SEO 
@@ -233,7 +235,7 @@ export function Footer() {
                   transition: { duration: 0.3 }
                 }}
               >
-                <Card className="h-full border border-slate-700/50 bg-slate-800/50 backdrop-blur-xl hover:shadow-lg transition-all duration-500 hover:border-purple-500/50 relative overflow-hidden">
+                <Card className="h-full border border-slate-700/50 bg-slate-800/50 backdrop-blur-xl hover:shadow-lg transition-all duration-500 hover:border-purple-500/50 relative overflow-hidden group">
                   {/* Animated background overlay */}
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -304,21 +306,32 @@ export function Footer() {
                         </motion.div>
                       ))}
                     </div>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-purple-500/50 text-purple-300 hover:bg-purple-900/30 text-xs sm:text-sm flex items-center justify-center"
+                    
+                    {/* Apply Now Button*/}
+                    <motion.a
+                      href="https://forms.gle/VDm85M1ndbPx51fm9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full relative z-20"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      style={{ 
+                        pointerEvents: 'all',
+                        position: 'relative',
+                        zIndex: 20
+                      }}
                     >
-                      <a
-                        href="https://forms.gle/VDm85M1ndbPx51fm9"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Button
+                        variant="outline"
+                        className="w-full border-purple-500/50 text-purple-300 hover:bg-purple-900/30 hover:border-purple-400/70 hover:text-purple-200 flex items-center justify-center transition-all duration-300 cursor-pointer pointer-events-none"
+                        asChild
                       >
-                        Apply Now
-                        <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                      </a>
-                    </Button>
+                        <span className="flex items-center justify-center w-full h-full">
+                          Apply Now
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </span>
+                      </Button>
+                    </motion.a>
                   </CardContent>
                 </Card>
               </motion.div>

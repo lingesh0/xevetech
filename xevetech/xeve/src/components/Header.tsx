@@ -13,7 +13,6 @@ export function Header() {
     { id: 'products', label: 'Products' },
     { id: 'team', label: 'Team' },
     { id: 'about', label: 'About' },
-    { id: 'careers', label: 'Join Team' } // <-- Add this line
   ];
 
   useEffect(() => {

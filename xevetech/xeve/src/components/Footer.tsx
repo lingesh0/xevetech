@@ -31,14 +31,14 @@ export function Footer() {
     {
       title: 'Data Scientist',
       department: 'Analytics',
-      location: 'San Francisco, CA',
+      location: 'Remote',
       type: 'Full-time',
       urgent: false,
     },
     {
       title: 'Product Manager',
       department: 'Product',
-      location: 'New York, NY',
+      location: 'Remote',
       type: 'Full-time',
       urgent: true,
     },
@@ -304,20 +304,21 @@ export function Footer() {
                         </motion.div>
                       ))}
                     </div>
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
+                      className="w-full border-purple-500/50 text-purple-300 hover:bg-purple-900/30 text-xs sm:text-sm flex items-center justify-center"
                     >
-                      <Button variant="outline" className="w-full group border-purple-500/50 text-purple-300 hover:bg-purple-900/30 text-xs sm:text-sm">
+                      <a
+                        href="https://forms.gle/VDm85M1ndbPx51fm9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Apply Now
-                        <motion.div
-                          className="ml-2"
-                          whileHover={{ x: 4 }}
-                        >
-                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
-                        </motion.div>
-                      </Button>
-                    </motion.div>
+                        <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>

@@ -142,7 +142,7 @@ export function Header() {
                 }}
               />
               <img 
-                src="/src/assets/logo.png" 
+                src="/assets/logo.png" 
                 alt="Xeve Tech Logo" 
                 className="w-full h-full object-contain relative z-10"
               />
@@ -218,7 +218,7 @@ export function Header() {
                     >
                       <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                         <img 
-                          src="/src/assets/logo.png" 
+                          src="/assets/logo.png" 
                           alt="Xeve Tech Logo" 
                           className="w-full h-full object-contain"
                         />
@@ -263,4 +263,5 @@ export function Header() {
       </div>
     </motion.header>
   );
+
 }

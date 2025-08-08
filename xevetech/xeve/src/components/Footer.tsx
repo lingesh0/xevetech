@@ -527,7 +527,7 @@ export function Footer() {
                 }}
               >
                 <img 
-                  src="/src/assets/logo.png" 
+                  src={logo} 
                   alt="Xeve Tech Logo" 
                   className="w-full h-full object-contain"
                 />

@@ -26,7 +26,7 @@ export function TeamSection() {
       photo: "/team/lingesh-t.jpg",
       bio: "Visionary leader with 10+ years of experience in AI and technology. Passionate about making AI accessible to businesses of all sizes.",
       expertise: ["AI Strategy", "Leadership", "Innovation"],
-      achievements: "500+ Projects Delivered",
+      achievements: "30+ Projects Delivered",
       social: {
         linkedin: "https://www.linkedin.com/in/lingesh-t-a879b5249/",
         twitter: "https://x.com/___lingesh__?s=09",
@@ -39,7 +39,7 @@ export function TeamSection() {
       photo: "/team/sarah-chen.jpg",
       bio: "Technical expert with deep expertise in machine learning and scalable AI systems. Leads our engineering team with innovation and precision.",
       expertise: ["Machine Learning", "System Architecture", "AI Engineering"],
-      achievements: "15+ Years Tech Experience",
+      achievements: "3+ Years Tech Experience",
       social: {
         linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
         twitter: "https://x.com/XeveTech",
@@ -52,7 +52,7 @@ export function TeamSection() {
       photo: "/team/michael-rodriguez.jpg",
       bio: "Product visionary who transforms complex AI solutions into intuitive user experiences. Drives product strategy and user-centric design.",
       expertise: ["Product Strategy", "UX Design", "AI Products"],
-      achievements: "100+ Products Launched",
+      achievements: "10+ Products Launched",
       social: {
         linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
         twitter: "https://x.com/XeveTech",
@@ -65,7 +65,7 @@ export function TeamSection() {
       photo: "/team/emily-watson.jpg",
       bio: "Engineering leader with expertise in building scalable AI platforms and managing high-performing development teams.",
       expertise: ["Software Architecture", "Team Leadership", "AI Development"],
-      achievements: "20+ Years Engineering",
+      achievements: "3+ Years Engineering",
       social: {
         linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
         twitter: "https://x.com/XeveTech",
@@ -78,7 +78,7 @@ export function TeamSection() {
       photo: "/team/david-kim.jpg",
       bio: "Creative director with a passion for user-centered design. Creates beautiful, intuitive interfaces that users love.",
       expertise: ["UX/UI Design", "Design Systems", "Creative Direction"],
-      achievements: "50+ Design Awards",
+      achievements: "50+ Design",
       social: {
         linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
         twitter: "https://x.com/XeveTech",
@@ -91,7 +91,7 @@ export function TeamSection() {
       photo: "/team/lisa-thompson.jpg",
       bio: "Sales leader with proven track record in B2B technology sales. Builds lasting relationships and drives revenue growth.",
       expertise: ["B2B Sales", "Client Relations", "Revenue Growth"],
-      achievements: "$50M+ Revenue Generated",
+      achievements: "$1M+ Revenue Generated",
       social: {
         linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
         twitter: "https://x.com/XeveTech",

@@ -482,7 +482,7 @@ export function Footer() {
                           {[
                             { icon: Github, link: 'https://github.com/lingesh007-ai' },
                             { icon: Twitter, link: 'https://x.com/XeveTech' },
-                            { icon: Linkedin, link: 'https://www.linkedin.com/company/xeve-tech-solution/?viewAsMember=true' },
+                            { icon: Linkedin, link: 'https://www.linkedin.com/company/xeve-tech-solution/' },
                             { icon: Instagram, link: 'https://www.instagram.com/xevetech/' }
                           ].map((social, index) => (
                             <motion.a

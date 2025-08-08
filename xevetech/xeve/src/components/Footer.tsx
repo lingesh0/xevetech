@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import logo from '@/assets/logo.png'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';

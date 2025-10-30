@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,8 @@ import {
   Zap,
   Code,
   Palette,
-  Database
+  Database,
+  ExternalLink
 } from 'lucide-react';
 
 export function TeamSection() {
@@ -24,13 +26,14 @@ export function TeamSection() {
       name: "Lingesh T",
       role: "CEO & Founder",
       photo: "/team/lingesh-t.jpg",
-      bio: "Visionary leader with 10+ years of experience in AI and technology. Passionate about making AI accessible to businesses of all sizes.",
+      bio: "Visionary leader with 1+ years of experience in AI and technology. Passionate about making AI accessible to businesses of all sizes.",
       expertise: ["AI Strategy", "Leadership", "Innovation"],
-      achievements: "30+ Projects Delivered",
+      achievements: "3+ Projects Delivered",
       social: {
         linkedin: "https://www.linkedin.com/in/lingesh-t-a879b5249/",
         twitter: "https://x.com/___lingesh__?s=09",
-        github: "https://github.com/lingesh0"
+        github: "https://github.com/lingesh0",
+        portfolio: "https://lingesh.vercel.app/"
       }
     },
     {
@@ -41,7 +44,7 @@ export function TeamSection() {
       expertise: ["Machine Learning", "System Architecture", "AI Engineering"],
       achievements: "3+ Years Tech Experience",
       social: {
-        linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
+        linkedin: "https://www.linkedin.com/in/kavivarman-s/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
@@ -54,7 +57,7 @@ export function TeamSection() {
       expertise: ["Product Strategy", "UX Design", "AI Products"],
       achievements: "10+ Products Launched",
       social: {
-        linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
+        linkedin: "https://www.linkedin.com/in/vishal-m-sri/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
@@ -67,7 +70,7 @@ export function TeamSection() {
       expertise: ["Software Architecture", "Team Leadership", "AI Development"],
       achievements: "3+ Years Engineering",
       social: {
-        linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
+        linkedin: "https://www.linkedin.com/in/vinodhariharan-ravi/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
@@ -80,20 +83,20 @@ export function TeamSection() {
       expertise: ["UX/UI Design", "Design Systems", "Creative Direction"],
       achievements: "50+ Design",
       social: {
-        linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
+        linkedin: "https://www.linkedin.com/in/praveen-arulraj-0902a6256/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
     },
     {
-      name: "Muja",
+      name: "Mujakath Ali",
       role: "Head of Sales",
       photo: "/team/lisa-thompson.jpg",
       bio: "Sales leader with proven track record in B2B technology sales. Builds lasting relationships and drives revenue growth.",
       expertise: ["B2B Sales", "Client Relations", "Revenue Growth"],
       achievements: "$1M+ Revenue Generated",
       social: {
-        linkedin: "https://www.linkedin.com/company/xeve-tech-solutions/",
+        linkedin: "https://www.linkedin.com/in/mujakath-ali-b48125256/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
@@ -191,6 +194,22 @@ export function TeamSection() {
     }
   };
 
+  useEffect(() => {
+    // Debugging: log leadership names so we can confirm Muja is present when this component mounts
+    try {
+      // eslint-disable-next-line no-console
+      console.log('Leadership members:', leadership.map(m => m.name));
+    } catch (e) {
+      // ignore
+    }
+  }, []);
+
+  const slugify = (name: string) =>
+    name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9\-]/g, '');
+
   return (
     <>
       <SEO 
@@ -266,6 +285,8 @@ export function TeamSection() {
             {leadership.map((member, index) => (
               <motion.div
                 key={member.name}
+                id={`member-${slugify(member.name)}`}
+                data-member={member.name}
                 variants={cardVariants}
                 whileHover={{ 
                   y: -5,
@@ -275,8 +296,8 @@ export function TeamSection() {
               >
                 <Card className="h-full border border-slate-700/50 bg-slate-800/50 backdrop-blur-xl hover:shadow-lg transition-all duration-500 hover:border-purple-500/50 relative overflow-hidden group">
                   {/* Animated background overlay */}
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"
+            <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                     whileHover={{ 
                       opacity: 1,
                       transition: { duration: 0.3 }
@@ -291,7 +312,7 @@ export function TeamSection() {
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                          className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent pointer-events-none"
                           animate={{ 
                             x: ['-100%', '100%'],
                           }}
@@ -361,6 +382,61 @@ export function TeamSection() {
                         ))}
                       </div>
                     </div>
+                    {/* Social links for each leader */}
+                    <div className="mt-4 flex justify-center space-x-3">
+                      {member.social?.linkedin && (
+                        <motion.a
+                          href={member.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`LinkedIn - ${member.name}`}
+                          whileHover={{ scale: 1.15 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center hover:bg-purple-700/50 transition-colors border border-purple-500/30"
+                        >
+                          <Linkedin className="w-4 h-4 text-purple-300" />
+                        </motion.a>
+                      )}
+                      {member.social?.twitter && (
+                        <motion.a
+                          href={member.social.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Twitter - ${member.name}`}
+                          whileHover={{ scale: 1.15 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center hover:bg-purple-700/50 transition-colors border border-purple-500/30"
+                        >
+                          <Twitter className="w-4 h-4 text-purple-300" />
+                        </motion.a>
+                      )}
+                      {member.social?.github && (
+                        <motion.a
+                          href={member.social.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`GitHub - ${member.name}`}
+                          whileHover={{ scale: 1.15 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center hover:bg-purple-700/50 transition-colors border border-purple-500/30"
+                        >
+                          <Github className="w-4 h-4 text-purple-300" />
+                        </motion.a>
+                      )}
+                      {member.social?.portfolio && (
+                        <motion.a
+                          href={member.social.portfolio}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Portfolio - ${member.name}`}
+                          whileHover={{ scale: 1.15 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center hover:bg-purple-700/50 transition-colors border border-purple-500/30"
+                        >
+                          <ExternalLink className="w-4 h-4 text-purple-300" />
+                        </motion.a>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -395,7 +471,7 @@ export function TeamSection() {
               >
                 <Card className="h-full border border-slate-700/50 bg-slate-800/50 backdrop-blur-xl hover:shadow-lg transition-all duration-500 hover:border-purple-500/50 relative overflow-hidden group text-center">
                   <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                     whileHover={{ 
                       opacity: 1,
                       transition: { duration: 0.3 }

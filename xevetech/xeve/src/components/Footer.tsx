@@ -45,9 +45,9 @@ export function Footer() {
   ];
 
   const teamStats = [
-    { label: 'Team Members', value: '150+', icon: Users },
-    { label: 'Countries', value: '25+', icon: MapPin },
-    { label: 'Projects Delivered', value: '500+', icon: Briefcase },
+    { label: 'Team Members', value: '8', icon: Users },
+    { label: 'Countries', value: '1', icon: MapPin },
+    { label: 'Projects Delivered', value: '10', icon: Briefcase },
   ];
 
   // Enhanced animation variants
@@ -393,7 +393,7 @@ export function Footer() {
                   viewport={{ once: false }}
                   whileHover={{ scale: 1.01 }}
                 >
-                  Launched in 2025, Xeve Tech began its journey as a collaborative effort among like-minded tech enthusiasts who wanted to solve real-world problems using intelligent, scalable, and user-friendly solutions. Our core belief is that technology should be accessible, efficient, and future-ready — and that's exactly what we strive to deliver in every project.
+                  Launched in 2025, Xeve Tech began its journey as a collaborative effort among like-minded tech enthusiasts who wanted to solve real-world problems using intelligent, scalable, and user-friendly solutions. Our core belief is that technology should be accessible, efficient, and future-ready  and that's exactly what we strive to deliver in every project.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -411,7 +411,7 @@ export function Footer() {
                   viewport={{ once: false }}
                   whileHover={{ scale: 1.01 }}
                 >
-                  At Xeve Tech, we're not just building products — we're building experiences, value, and trust. As we continue to grow, our focus remains on delivering exceptional technology backed by transparency, integrity, and a commitment to excellence.
+                  At Xeve Tech, we're not just building products we're building experiences, value, and trust. As we continue to grow, our focus remains on delivering exceptional technology backed by transparency, integrity, and a commitment to excellence.
                 </motion.p>
               </div>
             </motion.div>
@@ -498,6 +498,7 @@ export function Footer() {
                             </motion.a>
                           ))}
                         </div>
+                        
                       </div>
                     </CardContent>
                   </Card>

@@ -384,7 +384,7 @@ export function Footer() {
                   viewport={{ once: false }}
                   whileHover={{ scale: 1.01 }}
                 >
-                  Xeve Tech is a passionate startup founded by a team of enthusiastic developers and creative minds united by a single vision — to innovate, simplify, and elevate technology for businesses and individuals.
+                  Xeve Tech is a passionate startup founded by a team of enthusiastic developers and creative minds united by a single vision to innovate, simplify, and elevate technology for businesses and individuals.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}

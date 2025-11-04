@@ -6,6 +6,7 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { ProductsSection } from '@/components/ProductsSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { TeamSection } from '@/components/TeamSection';
 import { Footer } from '@/components/Footer';
 import { SEO, SEOConfigs } from '@/components/SEO';
@@ -146,6 +147,7 @@ export default function App() {
         <HeroSection />
         <ServicesSection />
         <ProductsSection />
+        <TestimonialsSection />
         <TeamSection />
       </main>
       

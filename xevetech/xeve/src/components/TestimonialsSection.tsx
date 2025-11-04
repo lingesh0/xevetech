@@ -22,6 +22,14 @@ export function TestimonialsSection() {
       role: 'Business Owner',
       rating: 5,
     },
+    {
+      id: 2,
+      company: 'TSROA Union,',
+      review: 'Xeve Tech Solutions provided exceptional digital support in building our official website for the TSROA Union. Their team delivered a clean, user-friendly, and efficient platform that helps us connect better with our members. We appreciate their professionalism, creativity, and timely execution.',
+      author: 'Saravana Kumar',
+      role: 'Namakkal District Head',
+      rating: 5, // 1-5 stars
+    },
   ];
 
   const containerVariants = {

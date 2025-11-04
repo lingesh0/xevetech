@@ -76,17 +76,6 @@ export function Header() {
     }
   };
 
-  const logoVariants = {
-    hover: {
-      scale: 1.1,
-      rotate: [0, -10, 10, 0],
-      transition: {
-        duration: 0.6,
-        ease: "easeInOut" as const
-      }
-    }
-  };
-
   const mobileMenuVariants = {
     closed: {
       opacity: 0,

@@ -14,7 +14,8 @@ export function Header() {
     { id: 'products', label: 'Products' },
     { id: 'team', label: 'Team' },
     { id: 'about', label: 'About' },
-    { id: 'careers', label: 'Join Team' } // This is correct!
+    { id: 'careers', label: 'Join Team' },
+    {id: 'testimonials', label: 'Testimonials'}
   ];
 
   useEffect(() => {

@@ -109,7 +109,7 @@ export function TeamSection() {
       expertise: ["Digital Marketing", "Brand Strategy", "Growth Marketing"],
       achievements: "100+ Campaigns Delivered",
       social: {
-        linkedin: "https://www.linkedin.com/in/krithick-s/",
+        linkedin: "https://www.linkedin.com/in/krithick-dev-a44541258/",
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }

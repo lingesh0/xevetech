@@ -100,6 +100,19 @@ export function TeamSection() {
         twitter: "https://x.com/XeveTech",
         github: "https://github.com/xevetech"
       }
+    },
+    {
+      name: "Krithick S",
+      role: "Head of Marketing",
+      photo: "/team/krithick-s.jpg",
+      bio: "Marketing strategist with expertise in digital marketing and brand growth. Drives innovative campaigns that connect with audiences and accelerate business growth.",
+      expertise: ["Digital Marketing", "Brand Strategy", "Growth Marketing"],
+      achievements: "100+ Campaigns Delivered",
+      social: {
+        linkedin: "https://www.linkedin.com/in/krithick-s/",
+        twitter: "https://x.com/XeveTech",
+        github: "https://github.com/xevetech"
+      }
     }
   ];
 
@@ -213,9 +226,9 @@ export function TeamSection() {
   return (
     <>
       <SEO 
-        title="Our Team - AI Experts & Innovators"
-        description="Meet our team of AI experts, data scientists, and technology innovators who are passionate about transforming businesses through cutting-edge solutions."
-        keywords="AI experts, data scientists, technology team, innovation leaders, tech professionals"
+        title="Our Team - AI Experts & Innovators | Xeve Tech Leadership"
+        description="Meet Xeve Tech's leadership team including Krithick S (Head of Marketing), Lingesh T (CEO), and our AI experts, data scientists, and technology innovators transforming businesses."
+        keywords="Xeve Tech team, Head of Marketing, Krithick S, AI experts, data scientists, technology team, innovation leaders, tech professionals, marketing head, digital marketing expert"
         url="/team"
       />
       <section id="team" className="py-12 sm:py-16 lg:py-20 relative px-4 sm:px-6 lg:px-8">
